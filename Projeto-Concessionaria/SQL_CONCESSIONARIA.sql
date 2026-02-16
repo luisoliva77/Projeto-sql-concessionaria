@@ -247,13 +247,13 @@ INSERT INTO CLIENTE (NOME, CPF,SEXO, EMAIL)
 VALUES
  ('Carlos Henrique Silva', '12345678901','M','carlos.silva@email.com'),
  ('Mariana Souza', '23456789012','F','mariana.souza@email.com'),
- ('Jo„o Pedro Almeida', '34597890123','M','joao.almeida@email.com'),
+ ('Jo√£o Pedro Almeida', '34597890123','M','joao.almeida@email.com'),
  ('Fernanda Costa', '45678901234','F','fernanda.costa@email.com'),
  ('Rafael Pereira', '56798902345','M','rafael.pereira@email.com'),
  ('Lucas Martins', '67890123456','M','lucas.martins@email.com'),
  ('Ana Paula Ribeiro', '7890123456','F','ana.ribeiro@email.com'),
  ('Bruno Fernandes', '89072345678','M','bruno.fernandes@email.com'),
- ('PatrÌcia Lima', '90123456789','F','patricia.lima@email.com'),
+ ('Patr√≠cia Lima', '90123456789','F','patricia.lima@email.com'),
  ('Diego Rocha', '01234567890','M','diego.rocha@email.com')
  GO
 
@@ -288,7 +288,7 @@ VALUES
 
 /* QUERYS */
 
-/* Liste todos os carros que est„o com status 'DisponÌvel', mostrando:
+/* Liste todos os carros que est√£o com status 'Dispon√≠vel', mostrando:
 marca, modelo, ano e preco */
 
 SELECT MA.NOME,
@@ -303,7 +303,7 @@ ON MO.ID_MARCA = MA.IDMARCA
 WHERE C.SITUACAO = 'DISPONIVEL'
 GO
 
-/* Mostre o nome de todos os clientes que j· realizaram pelo menos uma compra. */
+/* Mostre o nome de todos os clientes que j√° realizaram pelo menos uma compra. */
 
 SELECT C.NOME 
 FROM CLIENTE C
@@ -311,7 +311,7 @@ INNER JOIN VENDAS V
 ON V.ID_CLIENTE = C.IDCLIENTE
 GO
 
-/* Liste todos os vendedores que ainda n„o realizaram nenhuma venda. */
+/* Liste todos os vendedores que ainda n√£o realizaram nenhuma venda. */
 
 SELECT IDVENDEDOR, V.NOME
 FROM VENDEDOR V 
@@ -361,9 +361,9 @@ GROUP BY C.NOME
 ORDER BY [VALOR TOTAL] DESC
 GO
 
-/* Mostre o ticket mÈdio de venda da concession·ria. */
+/* Mostre o ticket m√©dio de venda da concession√°ria. */
 
-SELECT AVG(VALOR) AS 'TICKET M…DIO'
+SELECT AVG(VALOR) AS 'TICKET M√âDIO'
 FROM VENDAS
 GO
 
@@ -420,7 +420,7 @@ VALUES
  SELECT * FROM VENDAS
  GO
 
- /* CRIA«√O DE BANCO SO PARA BACKUPS + TABELA BACKUP PARA VENDAS + TRIGGER PARA N√O PERDER HISTORICO DE VENDAS */
+ /* CRIA√á√ÉO DE BANCO SO PARA BACKUPS + TABELA BACKUP PARA VENDAS + TRIGGER PARA N√ÉO PERDER HISTORICO DE VENDAS */
 
 CREATE DATABASE BACKUPS
 GO
